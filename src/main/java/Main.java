@@ -42,7 +42,7 @@ public class Main {
 
             while ((fileLine = in.readLine()) != null) {
                 System.out.println(BAN_COMMAND+ " " + fileLine);
-                StringSelection stringSelection = new StringSelection(fileLine);
+                StringSelection stringSelection = new StringSelection(BAN_COMMAND+ " " + fileLine);
                 Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
                 clipboard.setContents(stringSelection, stringSelection);
                 robot.keyPress(KeyEvent.VK_CONTROL);
